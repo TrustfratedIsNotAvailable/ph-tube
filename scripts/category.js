@@ -18,22 +18,26 @@ function display(categories){
 
     // 2. Loop operation
     // Create and append buttons for each category
-    categories.forEach(element => {
+    categories.forEach(cat => {
 
         //(More Optimized):
         const button = document.createElement('button');
         button.classList.add("btn","btn-sm","hover:bg-[#FF1F3D]","hover:text-white");
-        button.innerText=element.category;
+        button.innerText=cat.category;
+        
+        //function : loadCategoryVideos()
+        button.addEventListener("click",() => loadCategoryVideos(cat.category_id));
+
         categoryContainer.appendChild(button);
 
 
-        /*
-        const div = document.createElement('div');
-        div.innerHTML=`
-        <button class="btn btn-sm hover:bg-[#FF1F3D] hover:text-white">${element.category}</button>
-        `;
-        categoryContainer.appendChild(div);
-        */
+        
+        // const div = document.createElement('div');
+        // div.innerHTML=`
+        // <button onclick=categoricalVideos() class="btn btn-sm hover:bg-[#FF1F3D] hover:text-white">${cat.category}</button>
+        // `;
+        // categoryContainer.appendChild(div);
+        
 
     });
 }
