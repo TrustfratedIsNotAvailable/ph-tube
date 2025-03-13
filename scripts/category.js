@@ -8,19 +8,34 @@ function loadCategories(){
 }
 
 function display(categories){
-//console.log(categories);
+    //console.log(categories);
 
-//1. Get the container
-const categoryContainer = document.getElementById("category-container");
+    // category: "Music"
+    // category_id: "1001"
+   
+    //1. Get the container
+    const categoryContainer = document.getElementById("category-container");
 
-// 2. Loop operation
-// Create and append buttons for each category
-categories.forEach(element => {
-    const button = document.createElement('button');
-    button.classList.add("btn" ,"btn-sm");
-    button.innerText=element.category;
-    categoryContainer.appendChild(button);
-});
+    // 2. Loop operation
+    // Create and append buttons for each category
+    categories.forEach(element => {
 
+        //(More Optimized):
+        const button = document.createElement('button');
+        button.classList.add("btn","btn-sm","hover:bg-[#FF1F3D]","hover:text-white");
+        button.innerText=element.category;
+        categoryContainer.appendChild(button);
+
+
+        /*
+        const div = document.createElement('div');
+        div.innerHTML=`
+        <button class="btn btn-sm hover:bg-[#FF1F3D] hover:text-white">${element.category}</button>
+        `;
+        categoryContainer.appendChild(div);
+        */
+
+    });
 }
+
 loadCategories();
