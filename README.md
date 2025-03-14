@@ -41,6 +41,3 @@ Endpoint : https://openapi.programming-hero.com/api/phero-tube/video/video_id
 Example: [https://openapi.programming-hero.com/api/phero-tube/video/aaac](https://openapi.programming-hero.com/api/phero-tube/video/aaac) <br/>
 
 <hr/>
-<p align="center" style="font-size: 34px; font-weight:bold">
- Requirements
-</p>
